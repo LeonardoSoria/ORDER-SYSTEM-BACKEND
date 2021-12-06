@@ -12,13 +12,20 @@ import javax.persistence.*;
 @NoArgsConstructor
 @Entity
 @SuperBuilder
-@Table(name = "mustaches")
-public class Mustache {
+@Table(name = "combos")
+public class Combo {
 
     @Id
     @GeneratedValue
     private Long id;
 
-    @Column(name = "type", nullable = false)
-    private String type;
+    @Column(name = "description", nullable = false)
+    private String description;
+
+    @Column(name = "comboType", nullable = false)
+    private String comboType;
+
+    @Column(name = "price", nullable = false)
+    private Double price;
+
 }

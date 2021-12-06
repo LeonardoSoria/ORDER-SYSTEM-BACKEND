@@ -6,20 +6,26 @@ import lombok.NoArgsConstructor;
 import lombok.experimental.SuperBuilder;
 
 import javax.persistence.*;
+import java.time.LocalDate;
 
 @Data
 @AllArgsConstructor
 @NoArgsConstructor
 @Entity
 @SuperBuilder
-@Table(name = "nose")
-public class Nose {
+@Table(name = "invoices")
+public class Invoice {
 
     @Id
     @GeneratedValue
     private Long id;
 
-    @Column(name = "type", nullable = false)
-    private String type;
+    @Column(name = "fullName", nullable = false)
+    private String fullName;
 
+    @Column(name = "nit", nullable = false)
+    private String nit;
+
+    @Column(name = "invoiceDate", nullable = false)
+    private LocalDate invoiceDate;
 }

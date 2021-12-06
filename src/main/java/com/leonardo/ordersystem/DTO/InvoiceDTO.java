@@ -6,12 +6,16 @@ import lombok.Data;
 import lombok.NoArgsConstructor;
 import lombok.experimental.SuperBuilder;
 
+import java.util.List;
+
 @Data
 @AllArgsConstructor
 @NoArgsConstructor
 @SuperBuilder
-public class PartDTO {
+public class InvoiceDTO {
 
-    private Long id;
-    private String type;
+    private String fullName;
+    private String nit;
+    private Double total;
+    private List<RegisterSaleDTO> registerSaleDTOList;
 }
